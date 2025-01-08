@@ -27,7 +27,7 @@ def quaternion_mult(q1, q2):
     z = w1 * z2 + z1 * w2 + x1 * y2 - y1 * x2
     return [w,x,y,z]
 
-def quaternion_rotation(punt, q):
+def quaternion_rotation(v, q):
 	sub_product = quaternion_mult(q,v)
 	return quaternion_mult(sub_product, conjugate(q))
 
